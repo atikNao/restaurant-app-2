@@ -1,0 +1,26 @@
+@use  "./custom" as *;
+@use  "./mixin" as *;
+
+.count {
+    margin: 5rem 0;
+
+    @include media-breakpoint-up(sm){
+        margin: 10rem 0;
+    }
+
+    &-items {
+        background-color: $box-color;
+        border-radius: 1rem;
+        border: 1px solid $box-color;
+
+        p{
+            color: $primary;
+        }
+
+        &:hover {
+            @include bg-shadow;
+            border: 1px solid $box-border-color;
+        }
+    }
+    
+}

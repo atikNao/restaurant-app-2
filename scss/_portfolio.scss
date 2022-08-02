@@ -1,0 +1,43 @@
+@use  "./custom" as *;
+@use  "./mixin" as *;
+
+.portfolio {
+
+//    margin: 10rem 0;
+        padding: 5rem 0;
+
+    &-des {
+        color: $primary;
+    }
+
+    &-facility {
+        box-sizing: border-box;
+        background-color: #FCFCFD;
+        border: 1px solid  #FCFCFD;
+        border-radius: 1rem;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+
+        &:hover {
+            border: 1px solid #f4f5f6;
+            @include bg-shadow;
+        }
+
+        i {
+            background-color: #f1f1f3;
+            padding: 1rem;
+            border-radius: 50%;
+            font-size: 1.5rem;
+        }
+
+        &-title {
+            margin-top: 1rem;
+        }
+
+        &-des {
+            margin-top: .5rem;
+            color: $primary;
+            font-weight: 400;
+        }
+    }
+}

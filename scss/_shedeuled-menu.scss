@@ -1,0 +1,81 @@
+@use  "./custom" as *;
+@use "./mixin" as *;
+
+.shedeuled-menu {
+    margin: 5rem 0;
+
+    @include media-breakpoint-up(sm){
+        margin: 10rem 0;
+    }
+
+    &-header-filter{
+        
+        button{
+            background-color:transparent;
+            color: $primary;
+
+            &:hover {
+               color: shade-color($primary,50%);
+            }
+        }
+    }
+
+    &-items {
+        margin: 2rem auto 0 auto;        
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem;
+
+        @include media-breakpoint-only(md) {
+            grid-template-columns: repeat(2,1fr);
+        }
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        &--item {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 1rem;
+            border-radius: 1rem;
+
+            &-price {
+                position: absolute;
+                top: 0;
+                right: 1.5rem;
+                background-color: $white;
+                padding: .5rem ;
+                border-radius: 0 0  10px 10px;
+                font-weight: bold;
+                z-index: 9999;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 1rem 1rem 0 0;
+                height: 250px;
+
+                @include media-breakpoint-up(sm)
+                {
+                    max-width: 100%;
+                    height: 300px;
+                }
+
+            }
+
+            h4{
+                margin-top: 1.5rem;
+                padding-left: 1rem;
+            }
+
+            p {
+                padding-left: 1rem;
+                color: $primary;
+            }
+            
+            &:hover {
+                @include bg-shadow;
+            }
+        } 
+    }
+}

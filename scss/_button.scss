@@ -1,0 +1,30 @@
+@use  "./custom" as *;
+@use  "./mixin" as *;
+
+.btn-rounded {
+    border:0;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: #E8FAF4;
+    border: 1px solid $primary;
+    
+    i {
+        color: red;
+    }
+    &:hover{
+
+        i {
+            transform: rotate(-200deg);
+            transition: 1s ease-in-out;
+        }
+    }
+}
+
+.catagory-btn {
+    margin-left: 1rem;
+    padding: 5px 15px;
+    border-radius: 1rem;
+    background-color: $section-bg-color;
+    color: $primary;
+    border: 1px solid $box-border-color;
+}

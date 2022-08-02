@@ -1,0 +1,19 @@
+@use "../scss/custom"as *;
+
+//IMPORT SECTIONS
+@use "../scss/menu";
+@use "../scss/button";
+@use "../scss/intro";
+@use "../scss/banner";
+@use "../scss/portfolio";
+@use "../scss/story";
+@use "../scss/count";
+@use "../scss/shedeuled-menu";
+@use "../scss/article";
+@use "../scss/dishes";
+@use "../scss/social";
+@use "../scss/footer";
+
+// IMPORT COMPONENTS
+@use  "./mixin";
+

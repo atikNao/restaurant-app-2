@@ -1,0 +1,58 @@
+@use  "./custom" as *;
+.menu {
+    position: relative;
+
+    &-banner-dinner {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            max-width: 100%;
+            height: 800px;
+            border-radius: 1rem;
+        }
+    }
+
+    &-items {       
+
+        &--item {
+            display: flex;
+            position: relative;
+
+            &:hover {
+                border: 1px solid #f4f5f6;
+                box-shadow: 0 30px 40px rgba(119,126,144,.15);
+                border-radius: 1rem;
+            }
+
+            .item-img {
+                width: 60px;
+                height: auto;
+                
+                img {
+                    width: 60px ;
+                    height: 60px;
+                }
+            }
+
+            .item-des {
+                position: relative;
+
+                #price {
+                    position: absolute;
+                    top: -1rem;
+                    right: -1rem;
+                    // background: rgb(247, 143, 46);
+                    padding: .5rem;
+                    background-color: #E8FAF4;
+                    border-radius: 50%;            
+                }
+                p {
+                    color: lighten(#000000,50%);
+                }
+            }
+        }
+    }
+
+   
+}

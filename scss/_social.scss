@@ -1,0 +1,36 @@
+@use "./custom" as *;
+
+
+.social {
+    margin: 5rem 0;
+
+    @include media-breakpoint-up(sm){
+        margin: 10rem 0;
+    }
+
+    &-header {
+        h2 {
+            font-weight: bold;        
+        }    
+    }
+
+    &-content {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 1rem;
+
+        @include media-breakpoint-up(sm){
+            grid-template-columns: repeat(4,1fr);
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+          
+            @include media-breakpoint-up(lg){
+                width: 100%;
+                height: 330px;
+            }
+        }
+    }
+}

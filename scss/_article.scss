@@ -1,0 +1,76 @@
+@use "./custom" as *;
+@use "./mixin" as *;
+
+.article {
+    margin: 5rem 0;
+
+    @include media-breakpoint-up(sm){
+        margin: 10rem 0;
+
+    }
+    
+    &-header{
+        margin-bottom: 2rem;
+
+        &-title{
+            padding-bottom: .5rem;
+
+        }
+    }
+
+    &-body{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem;
+
+        @include media-breakpoint-only(md){
+            grid-template-columns: repeat(2,1fr);
+        }       
+        @include media-breakpoint-up(lg){
+            grid-template-columns: repeat(3,1fr);
+        }       
+
+        &-des {
+            padding-bottom: 1rem;
+            border-radius: 1rem;      
+   
+            &-img {
+                position: relative;
+                height: 160px;
+                overflow: hidden;
+                border-radius: 1rem 1rem 0 0; 
+                margin-bottom: 2rem;
+
+                @include media-breakpoint-up(sm){
+                    height: 250px;
+                }     
+
+                img {                    
+                    max-width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    border-radius: 1rem 1rem 0 0; 
+                }
+            }
+
+            &-date {
+                color: $primary;
+                font-size: 1rem;
+                margin-left: 1rem;
+            }
+
+            &-title {   
+                padding: .5rem 0 ;
+                font-weight: bold;
+                margin-left: 1rem;
+            }
+           
+            &:hover {
+                @include bg-shadow;
+            }       
+        }
+    }
+   
+}

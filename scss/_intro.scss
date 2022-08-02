@@ -1,0 +1,50 @@
+@use  "./custom" as *;
+@use  "./mixin" as *;
+
+.intro {
+    margin-top: 5rem;
+    margin-bottom: 5rem;   
+
+    @include media-breakpoint-up(lg){
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
+    
+    &-title {
+        font-weight: 700;
+        font-size: 49px;
+        text-align: center;
+
+        @include media-breakpoint-between(sm, lg){
+            font-size: 70px;
+        }
+
+        @include media-breakpoint-up(lg){
+            font-size: 90px;
+            text-align: left;
+
+        }
+                
+    }
+
+    &-des {
+        p{
+            color: $primary;
+            // font-size: 24px;
+            font-weight: 500;
+            line-height: 2;
+            text-align: center;
+            @include media-breakpoint-up(lg){
+                text-align: right;
+            }       
+        }
+    }
+    &-btn {
+        text-align: center;
+        
+        @include media-breakpoint-up(lg){
+            text-align: right;
+        }
+    }
+
+}
